@@ -7,12 +7,14 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "main" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.0.0/24"
+  availability_zone = "us-east-1a"
 }
 
 #Create a Subnet
 resource "aws_subnet" "sec" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.1.0/24"
+  availability_zone = "us-east-1b"
 }
 
 
