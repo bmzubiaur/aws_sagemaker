@@ -4,6 +4,6 @@ resource "aws_db_instance" "default" {
   instance_class       = "db.t3.small"
   username             = var.database_username
   password             = var.database_password
-  db_subnet_group_name  = aws_db_subnet_group.main.id
+  db_subnet_group_name  = aws_db_subnet_group.db_main.id
   skip_final_snapshot  = true
 }
