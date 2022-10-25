@@ -5,3 +5,7 @@ output "db_subnet_id" {
 output "subnet_id" {
   value = aws_subnet.main.id
 }
+
+output "vpc_default_sec_group" {
+  value = 
+}
