@@ -25,10 +25,11 @@ resource "aws_iam_policy_attachment" "sm_full_access_attach" {
 
 #creating the instance
 resource "aws_sagemaker_notebook_instance" "ni" {
-  name          = "my-notebook-instance"
-  role_arn      = aws_iam_role.notebook_iam_role.arn
-  instance_type = "ml.t2.medium"
-  subnet_id     = var.subnet_id
+  name             = "my-notebook-instance"
+  role_arn         = aws_iam_role.notebook_iam_role.arn
+  instance_type    = "ml.t2.medium"
+  subnet_id        = var.subnet_id
+  security_groups  = [var.vpc_default_sec_group]
 
   tags = {
     Name = "foo"
