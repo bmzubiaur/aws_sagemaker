@@ -1,5 +1,5 @@
 resource "aws_db_instance" "default" {
-  allocated_storage    = 10
+  allocated_storage    = 20
   engine               = "sqlserver-ex"
   instance_class       = "db.t3.small"
   username             = var.database_username
