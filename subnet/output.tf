@@ -7,5 +7,5 @@ output "subnet_id" {
 }
 
 output "vpc_default_sec_group" {
-  value = 
+  value = aws_vpc.main.default_security_group_id
 }
