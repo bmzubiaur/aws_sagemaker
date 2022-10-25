@@ -1,3 +1,10 @@
+#Create a DB Subnet group
+resource "aws_db_subnet_group" "db_main" {
+  name       = "db_main"
+  subnet_ids = [aws_subnet.main.id]
+}
+
+#Creat DB instance
 resource "aws_db_instance" "default" {
   allocated_storage    = 20
   engine               = "sqlserver-ex"
